@@ -98,22 +98,37 @@
     transition: 0.3s ease-in-out;
   }
 
-  .details a {
+  .details .detailslinks a {
     text-decoration: none;
     color: #454245;
     display: flex;
     flex-direction: column;
     width: max-content;
+    @apply font-circular;
   }
-  .details a:hover {
+  .details .detailslinks a:hover {
+    color: #1264a3;
+  }
+
+  .lgdetailslinks a{
+    text-decoration: none;
+    color: #454245;
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    @apply font-circular;
+  }
+
+  .lgdetailslinks a:hover{
     color: #1264a3;
   }
 
   .midfooterlinks a {
     text-decoration: none;
     color: #000000;
-    font-weight: 600;
+    font-weight: 500;
     width: max-content;
+    @apply font-circular;
   }
 
   .midfooterlinks a:hover {
@@ -124,7 +139,76 @@
     display: block;
   }
 
-  .iconrow i{
+  .iconrow i {
     font-size: 18px;
+  }
+
+  .lgfootericonrow i{
+    cursor: pointer;
+  }
+
+  .lgfootericonrow i:hover{
+    color: #1264a3;
+  }
+
+  .hbutton1:hover {
+    box-shadow: inset 0 0 0 1px #ffffff;
+  }
+
+  .hbutton2:hover {
+    box-shadow: inset 0 0 0 2px #611f69;
+  }
+
+  .hBUTTON3:hover {
+    box-shadow: inset 0 0 0 1px #541554;
+  }
+
+  .comlogosrow img {
+    @apply w-24 h-full;
+  }
+
+  #bgVideo {
+    position: relative;
+    /* right: 0;
+    bottom: 0; */
+    z-index: 0;
+    /* min-width: 100%;
+    min-height: 100%; */
+  }
+
+  /* Add some content at the bottom of the video/page */
+  /* .content { 
+    position: absolute;
+    bottom: 0;
+    color: #8a0000;
+    width: 100%;
+    padding: 20px;
+  } */
+
+  .animatedlinks {
+    position: relative; /* To position the underline properly */
+    display: inline-block;
+    padding-bottom: 0.5px; /* Space for the underline */
+  }
+
+  /* .animatedlinks:hover {
+    transition: 0.4s all ease;
+  } */
+
+  .animatedlinks::after {
+    content: ''; /* Create the underline */
+    position: absolute; /* Position it under the text */
+    width: 100%; /* Make it cover the whole width of the link */
+    height: 1.5px; /* Height of the underline */
+    bottom: 0; /* Position it at the bottom */
+    left: 0; /* Start from the left side */
+    background-color: #1264a3; /* Color of the underline */
+    transform: scaleX(0); /* Initially hide the underline */
+    transform-origin: bottom left; /* Scale from the bottom left corner */
+    transition: transform 0.3s ease; /* Add a smooth transition effect */
+  }
+
+  .animatedlinks:hover::after {
+    transform: scaleX(1); /* Show the underline on hover */
   }
 }
